@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       
+       .side-bar {
+    float: left;
+    width: 25%;
+}
+.side-bar {
+    /* other properties*/
+    padding: 1em;
+}
+@media(min-width:800px){
+    .side-bar {
+        float: left;
+        width: 25%;
+    } .img table{
+        display:flex ;
+    }
+}
         table {
             border: 1px solid black;
             width: 100%;
@@ -60,32 +75,52 @@
 <body>
 
     <div class="wrapper">
-        <img src="Kimberley_Isaac_Image.jpeg" alt="KRI" width="250px" height="250px" style="float: right; margin-right: 20px; ">
-        <p style="font-size: 35px; padding: 50px;">Kimberley R. Isaac</p>
+        <img src="Kimberley_Isaac_Image.jpeg" alt="KRI" width="250px" height="250px" style="float: right; margin-right: 400px;margin-bottom: 50px;">
+        <p style="font-size: 35px; padding: 50px; text-align: center; margin-bottom: 200px;">Kimberley R. Isaac</p>
+
     </div>
+
+    <div class="main clearfix" >
+        <div class="side-bar" >
+            <h1>Which city?</h1>
+            <img src="table.png" alt="table">
+</div>
+<div class="content" >
+    <h2 >Main content</h2>
+   <p>d tempor incididunt ut labore et dolore magna aliqua. 
+Pellentesque nec nam aliquam sem et tortor consequat id. 
+Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. 
+Aliquam ut porttitor leo a. Quis eleifend quam adipiscing vitae proin. 
+Ut faucibus pulvinar elementum integer enim neque volutpat. 
+Pellentesque diam volutpat commodo sed egestas egestas. 
+Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. 
+Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
+Metus aliquam eleifend mi in. 
+Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. 
+Lobortis mattis aliquam faucibus purus in massa. 
+Morbi tristique senectus et netus et. Sed id semper risus in. 
+Ut sem nulla pharetra diam sit. 
+Nibh venenatis cras sed felis eget velit aliquet.</p>
+</div>
+
     <div class="wrapper">
-        <p style="font-size: 35px;">Which City?</p>
-        <img src="Kimberley_Isaac_Image.jpeg" alt="KRI" width="250px" height="250px" style="float: left; margin-right: 20px; margin-bottom: 20px;">
-        <p style="font-size: 20px;">Then decide how many HTML containers you will need for this page. Draw the basic containers out on a piece of paper; take a photo of your drawing and add it to your kanban planning. Review this with a mentor before you proceed. First, use Flexbox. The first version should use HTML & CSS with Flexbox - no CSS framework to do the web page. It should be responsive and resize according to the screen size used. On small screens</p>
-    </div>
-    <div class="wrapper">
-        <p style="font-size: 35px;">Foreign Language</p>
+        <p style="font-size: 35px;margin-top: 100px;">Foreign Language</p>
         <p style="font-size: 20px;">Then decide how many HTML containers you will need for this page. Draw the basic containers out on a piece of paper; take a photo of your drawing and add it to your kanban planning. Review this with a mentor before you proceed. First, use Flexbox. The first version should use HTML & CSS with Flexbox - no CSS framework to do the web page. It should be responsive and resize according to the screen size used. On small screens</p>
         <table>
             <tr>
                 <th>Company</th>
                 <th>Contact</th>
-                <th>Country</th>
+               
             </tr>
             <tr>
                 <td>Alfreds Futterkiste</td>
                 <td>Maria Anders</td>
-                <td>Germany</td>
+
             </tr>
             <tr>
                 <td>Centro comercial Moctezuma</td>
                 <td>Francisco Chang</td>
-                <td>Mexico</td>
+             
             </tr>
         </table>
     </div>
@@ -109,5 +144,8 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget odio nec magna rhoncus sodales.</p>
         <img src="Kimberley_Isaac_Image.jpeg" alt="Image 3">
     </div>
+    <a target="_blank" class="fcc-btn" href="index.html">freeCodeCamp</a>
+    <a target="_blank" class="fcc-btn" href="my-webpage-grid.html">freeCodeCamp</a>
+
 </body>
 </html>
