@@ -5,22 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       .side-bar {
-    float: left;
-    width: 25%;
-}
-.side-bar {
-    /* other properties*/
-    padding: 1em;
-}
-@media(min-width:800px){
-    .side-bar {
-        float: left;
-        width: 25%;
-    } .img table{
-        display:flex ;
+        /*Title*/
+        
+        .top-section {
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      padding: 20px;
+      position: static; 
+      top: 0; 
+      width: 100%; 
+      z-index: 10;
+      background-image: url('table.png');
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
     }
-}
+    
+
+    .top-title {
+      font-size: 24px; 
+      margin-right: 10px; 
+      color:aliceblue;
+    }
+
+    .top-image {
+      width: 300px; 
+      height: 300px; 
+    }
+
+   
+    @media screen and (max-width: 768px) {
+      .top-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .top-title,
+      .top-image {
+        margin-bottom: 5px;
+      }
+   
+    
+    }
+        /*why city*/
+        .container { 
+      display: flex; 
+    }
+
+    .side-bar {
+      width: 25%; 
+      padding: 1em;
+      float: left;
+    }
+
+    .content {
+      flex: 1;
+      padding: 1em; 
+    }
+
+    .content p { 
+        margin-top: 110px;
+      margin-bottom: 10px; 
+    }
+
+
+    .side-bar img, .content img { 
+      max-width: 100%;
+      height: auto; 
+    }
+
+   
+    @media screen and (max-width: 800px) {
+      .container {
+        flex-direction: column; 
+      }
+
+      .side-bar {
+        float: none; 
+        width: 50%;
+        margin-bottom: 20px; 
+      }
+
+      .content {
+        margin-top: 0;
+      }
+    }
+/*foreign language*/
         table {
             border: 1px solid black;
             width: 100%;
@@ -30,6 +101,7 @@
             border: 1px solid black;
             padding: 8px;
             text-align: left;
+            font-size: 24px;
         }
         th {
             background-color: #f2f2f2;
@@ -37,115 +109,222 @@
         .wrapper {
             margin-bottom: 20px;
         }
-        .column {
-            width: calc(33.33% - 20px); 
-            padding: 10px;
-            box-sizing: border-box;
-            display: inline-block;
-            vertical-align: top; 
-        }
-        .column h2 {
-            margin-top: 0; 
-        }
-        .column p {
-            margin-bottom: 10px; 
-        }
-        .column img {
-            max-width: 100%;
-            height: auto;
-            margin-right: 10px; 
-        }
+    /*historical places*/  
+    .container {
+      display: flex;
+      flex-wrap: wrap; 
+    }
 
-        
-        @media only screen and (max-width: 768px) {
-            .column {
-                width: 100%;
-                display: block;
-            }
-        }
+    .box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      max-width: 579px; 
+      margin-bottom: 20px; 
+      box-sizing: border-box; 
+      display: flex; 
+      flex-direction: column; 
+    }
 
-        @media only screen and (max-width: 480px) {
-            .column img {
-                display: block;
-                margin: 0 auto;
-            }
-        }
+    .heading {
+      margin-bottom: 10px;
+    }
+
+    .content {
+      display: flex; 
+    }
+
+    .description {
+      flex: 1; 
+      font-size: 14px;
+    }
+    .content p{
+      font-size: 25px;
+    }
+
+    .image {
+      width: 120px; 
+      height: 120px; 
+      margin-left: auto;
+    }
+
+  
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; 
+  }
+
+  .box:nth-child(odd) .content {
+    flex-direction: row-reverse;
+  }
+
+  .box .content {
+    flex-direction: column;
+  }
+
+  .box .image {
+    margin-left: 0; 
+    margin-bottom: 10px; 
+  }
+
+  .box .description {
+    margin-left: 0; 
+  }
+}  
+/*button*/
+.wrapper .button-link {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 17px 0;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #f89880;
+  text-align: center;
+  text-decoration: none;
+}
+
+.wrapper .button-link:hover {
+  background: #e57254;
+}
+
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <img src="Kimberley_Isaac_Image.jpeg" alt="KRI" width="250px" height="250px" style="float: right; margin-right: 400px;margin-bottom: 50px;">
-        <p style="font-size: 35px; padding: 50px; text-align: center; margin-bottom: 200px;">Kimberley R. Isaac</p>
-
-    </div>
+    <div class="top-section">
+        <h1 class="top-title">Kimberley R Isaac</h1>
+        <img src="Kimberley_Isaac_Image.jpeg" alt="Short Description Image" class="top-image">
+        
+      </div>
 
     <div class="main clearfix" >
         <div class="side-bar" >
             <h1>Which city?</h1>
-            <img src="table.png" alt="table">
+            <img src="Nieu.jpg" alt="nieu">
 </div>
 <div class="content" >
-    <h2 >Main content</h2>
-   <p>d tempor incididunt ut labore et dolore magna aliqua. 
-Pellentesque nec nam aliquam sem et tortor consequat id. 
-Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. 
-Aliquam ut porttitor leo a. Quis eleifend quam adipiscing vitae proin. 
-Ut faucibus pulvinar elementum integer enim neque volutpat. 
-Pellentesque diam volutpat commodo sed egestas egestas. 
-Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. 
-Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
-Metus aliquam eleifend mi in. 
-Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. 
-Lobortis mattis aliquam faucibus purus in massa. 
-Morbi tristique senectus et netus et. Sed id semper risus in. 
-Ut sem nulla pharetra diam sit. 
-Nibh venenatis cras sed felis eget velit aliquet.</p>
+   <p>The Owl House: This eccentric museum, created by artist Helen Martins, is a must-see. Her whimsical sculptures and colorful creations using ostrich eggshells offer a unique glimpse into her artistic vision.
+
+    Karoo Landscape: The vast, semi-arid Karoo landscape surrounding Nieu-Bethesda is a photographer's paradise. Dramatic sunsets, starry night skies, and unique rock formations create a sense of tranquility and remoteness.
+    
+    Arts and Crafts Scene: Nieu-Bethesda fosters a vibrant arts and crafts scene. Explore local galleries and studios to discover one-of-a-kind pieces by talented artisans.
+    
+    Stargazing Paradise: With minimal light pollution, Nieu-Bethesda offers exceptional stargazing opportunities. Witness the Milky Way in all its glory and marvel at the constellations on a clear night.
+    
+    Relaxing Escape: Nieu-Bethesda provides a welcome escape from the hustle and bustle of city life. Enjoy the slow pace, friendly locals, and peaceful atmosphere.</p>
 </div>
 
     <div class="wrapper">
         <p style="font-size: 35px;margin-top: 100px;">Foreign Language</p>
-        <p style="font-size: 20px;">Then decide how many HTML containers you will need for this page. Draw the basic containers out on a piece of paper; take a photo of your drawing and add it to your kanban planning. Review this with a mentor before you proceed. First, use Flexbox. The first version should use HTML & CSS with Flexbox - no CSS framework to do the web page. It should be responsive and resize according to the screen size used. On small screens</p>
+        <p style="font-size: 24px;">I have been intrigued by the Korean language ever since I listen Korean pop music.</p>
         <table>
             <tr>
-                <th>Company</th>
-                <th>Contact</th>
+                <th>English Phrase</th>
+                <th>Korean Phrase (Romanization)</th>
                
             </tr>
             <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
+                <td>Hello</td>
+                <td>Anyeonghaseyo (안녕하세요)</td>
 
             </tr>
             <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
+                <td>Thank you</td>
+                <td>Kamsahamnida (감사합니다)</td>
+             
+            </tr>
+            <tr>
+                <td>How are you?</td>
+                <td>Jal jinae (잘 지내?)</td>
              
             </tr>
         </table>
     </div>
     <div class="wrapper">
+      <p style="font-size: 35px;">Subjects</p>
+      <p style="font-size: 30px;">Graduated with BCom in Information Systems at the University of Johannesburg</p>
+  </div>
+  <div class="container">
+      <div class="box">
+        <div class="heading">
+          <h2>Development Software</h2>
+        </div>
+        <div class="content">
+          <img src="dev.jpg" alt="Image 1" width="120px" height="120px" class="image">
+          <div class="description"></div>
+        </div>
+      </div>
+  
+      <div class="box">
+        <div class="heading">
+          <h2>Entrepreneurship</h2>
+        </div>
+        <div class="content">
+          <img src="Entre.jpg" alt="Image 2" width="120px" height="120px" class="image">
+          <div class="description"></div>
+        </div>
+      </div>
+  
+      <div class="box">
+        <div class="heading">
+          <h2>Information System</h2>
+        </div>
+        <div class="content">
+          <img src="info.jpg" alt="Image 3" width="120px" height="120px" class="image">
+          <div class="description"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="wrapper">
         <p style="font-size: 35px;">Historical Places</p>
     </div>
-    <div class="column">
-        <h2>Column 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget odio nec magna rhoncus sodales.</p>
-        <img src="Kimberley_Isaac_Image.jpeg" alt="Image 1">
-    </div>
-
-    <div class="column">
-        <h2>Column 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget odio nec magna rhoncus sodales.</p>
-        <img src="Kimberley_Isaac_Image.jpeg" alt="Image 2">
-    </div>
-
-    <div class="column">
-        <h2>Column 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget odio nec magna rhoncus sodales.</p>
-        <img src="Kimberley_Isaac_Image.jpeg" alt="Image 3">
-    </div>
-    <a target="_blank" class="fcc-btn" href="index.html">freeCodeCamp</a>
-    <a target="_blank" class="fcc-btn" href="my-webpage-grid.html">freeCodeCamp</a>
-
+    <div class="container">
+        <div class="box">
+          <div class="heading">
+            <h2>Damesfontein</h2>
+          </div>
+          <div class="content">
+            <img src="Damesfontein.jpg" alt="Image 1" width="120px" height="120px" class="image">
+            <div class="description">Fact 1: This restored 19th-century farmhouse offers a glimpse into the lives of early Karoo settlers.
+                Fact 2: The farmhouse belonged to the Steyn family for five generations, and the collection of artifacts within showcases their history and farming practices.
+                Fact 3: Visitors can tour the well-preserved rooms, explore the farmyard with traditional outbuildings, and learn about the region's agricultural heritage.</div>
+          </div>
+        </div>
+    
+        <div class="box">
+          <div class="heading">
+            <h2>Owl House</h2>
+          </div>
+          <div class="content">
+            <img src="owl house.jpg" alt="Image 2" width="120px" height="120px" class="image">
+            <div class="description">Fact 1: Created by eccentric artist Helen Martins, The Owl House is a whimsical wonderland adorned with sculptures and mosaics crafted from everyday objects like ostrich eggshells.
+Fact 2: Martins believed she was guided by a "little owl" spirit, inspiring the house's name and owl motif.
+Fact 3: Today, The Owl House is a national monument, preserving Martins' unique artistic vision for future generations.</div>
+          </div>
+        </div>
+    
+        <div class="box">
+          <div class="heading">
+            <h2>Nieu-Bethesda Church</h2>
+          </div>
+          <div class="content">
+            <img src="Nieu Church.jpg" alt="Image 3" width="120px" height="120px" class="image">
+            <div class="description">Fact 1: Built in the late 19th century, the Nieu-Bethesda Church is a beautiful example of Dutch Reformed architecture.
+                Fact 2: The church's stained-glass windows and sandstone exterior contribute to its historical charm.
+                Fact 3: Services are still held in the church today, offering visitors a chance to experience its spiritual significance and connect with the local community.</div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+      <div class="content">
+      <a href="index.html" class="button-link">Index</a>
+    <a href="my-webpage-grid.html" class="button-link">Flexbox Personal Page</a>
+  </div>
+</div>
 </body>
 </html>

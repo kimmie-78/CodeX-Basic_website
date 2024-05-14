@@ -1,88 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .container {
-      display: flex;
-      flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Title*/
+        .top-section {
+            text-align: center;
+            padding: 20px;
+            background-image: url('table.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
 
-    .box {
-      border: 1px solid #ccc;
-      padding: 20px;
-      max-width: 579px; /* Two boxes per row on larger screens (adjust as needed) */
-      margin-bottom: 20px; /* Space between boxes */
-      box-sizing: border-box; /* Include padding and border in the box's total width */
-      display: flex; /* Make box a flex container for vertical layout */
-      flex-direction: column; /* Stack elements vertically */
-    }
+        .top-title {
+            font-size: 24px;
+            color: aliceblue;
+        }
 
-    .heading {
-      margin-bottom: 10px;
-    }
+        .top-image {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
 
-    .content {
-      display: flex; /* Make content a flex container for image and description */
-      /* Reverse the order for box number 2 using nth-child selector */
-    }
+        /*Content*/
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    .description {
-      margin-left: 20px; /* Adjust margin for RTL layout if needed */
-      flex: 1; /* Allow description to grow horizontally */
-    }
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
-    .image {
-      width: 120px; /* Set image width */
-      height: 120px; /* Set image height */
-      margin-right: auto; /* Align image to the left in RTL layout */
-    }
+        /*Foreign Language*/
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-    /* Target the second box (.box:nth-child(2) .content) and reverse order */
-    .box:nth-child(2) .content {
-      flex-direction: row-reverse;
-    }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            font-size: 16px;
+        }
 
-    /* Media query for smaller screens (maintain stacking) */
-    @media screen and (max-width: 768px) {
-      .container {
-        flex-direction: column; /* Maintain column stacking for all screen sizes */
-      }
-    }
-  </style>
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /*Subjects*/
+        .subjects {
+            display: flex;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .subject {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .subject img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /*Historical Places*/
+        .places {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .place {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .place img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /*Button*/
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-link {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background: #f89880;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button-link:hover {
+            background: #e57254;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="box">
-      <div class="heading">
-        <h2>Heading 1</h2>
-      </div>
-      <div class="content">
-        <img src="Kimberley_Isaac_Image.jpeg" alt="Image 1" width="120px" height="120px">
-        <div class="description">Then decide how many HTML containers you will need for this page. Draw the basic containers out on a piece of paper; take a photo of your drawing and add it to your kanban planning. Review this with a mentor before you proceed. First, use Flexbox. The first version should use HTML & CSS with Flexbox - no CSS framework to do the web page. It should be responsive and resize according to the screen size used. On small screens</div>
-      </div>
-    </div>
 
-    <div class="box">
-      <div class="heading">
-        <h2>Heading 2</h2>
-      </div>
-      <div class="content">
-        <div class="description">Then decide how many HTML containers you will need for this page. Draw the basic containers out on a piece of paper; take a photo of your drawing and add it to your kanban planning. Review this with a mentor before you proceed. First, use Flexbox. The first version should use HTML & CSS with Flexbox - no CSS framework to do the web page. It should be responsive and resize according to the screen size used. On small screens</div>
-        <img src="Kimberley_Isaac_Image.jpeg" alt="Image 2" width="120px" height="120px" class="image">
-      </div>
-    </div>
+<div class="top-section">
+    <h1 class="top-title">Kimberley R Isaac</h1>
+    <img src="Kimberley_Isaac_Image.jpeg" alt="Short Description Image" class="top-image">
+</div>
 
-    <div class="box">
-      <div class="heading">
-        <h2>Heading 3</h2>
-      </div>
-      <div class="content">
-        <img src="Kimberley_Isaac_Image.jpeg" alt="Image 3" width="120px" height="120px">
-        <div class="description">Yet another description goes here</div>
-      </div>
-    </div
-</body
+<div class="content">
+    <h2>Which city?</h2>
+    <p>The Owl House: This eccentric museum, created by artist Helen Martins, is a must-see. Her whimsical sculptures
+        and colorful creations using ostrich eggshells offer a unique glimpse into her artistic vision.</p>
+    <!-- Add more content as needed -->
+</div>
+
+<div class="content">
+    <h2>Foreign Language</h2>
+    <p>I have been intrigued by the Korean language ever since I listen to Korean pop music.</p>
+    <table>
+        <tr>
+            <th>English Phrase</th>
+            <th>Korean Phrase (Romanization)</th>
+        </tr>
+        <tr>
+            <td>Hello</td>
+            <td>Anyeonghaseyo (안녕하세요)</td>
+        </tr>
+        <tr>
+            <td>Thank you</td>
+            <td>Kamsahamnida (감사합니다)</td>
+        </tr>
+        <tr>
+            <td>How are you?</td>
+            <td>Jal jinae (잘 지내?)</td>
+        </tr>
+    </table>
+</div>
+
+<div class="content">
+    <h2>Subjects</h2>
+    <div class="subjects">
+        <div class="subject">
+            <img src="dev.jpg" alt="Development Software">
+            <h3>Development Software</h3>
+        </div>
+        <div class="subject">
+            <img src="Entre.jpg" alt="Entrepreneurship">
+            <h3>Entrepreneurship</h3>
+        </div>
+        <div class="subject">
+            <img src="info.jpg" alt="Information System">
+            <h3>Information System</h3>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <h2>Historical Places</h2>
+    <div class="places">
+        <div class="place">
+            <img src="Damesfontein.jpg" alt="Damesfontein">
+            <h3>Damesfontein</h3>
+            <p>Fact 1: This restored 19th-century farmhouse offers a glimpse into the lives of early Karoo settlers.
+            Fact 1: This restored 19th-century farmhouse offers a glimpse into the lives of early Karoo settlers.
+                Fact 2: The farmhouse belonged to the Steyn family for five generations, and the collection of artifacts within showcases their history and farming practices.
+                Fact 3: Visitors can tour the well-preserved rooms, explore the farmyard with traditional outbuildings, and learn about the region's agricultural heritage.</p>
+        </div>
+        <div class="place">
+            <img src="owl house.jpg" alt="Owl House">
+            <h3>Owl House</h3>
+            <p>Fact 1: Created by eccentric artist Helen Martins, The Owl House is a whimsical wonderland adorned with
+                sculptures and mosaics crafted from everyday objects like ostrich eggshells.
+                Fact 1: Created by eccentric artist Helen Martins, The Owl House is a whimsical wonderland adorned with sculptures and mosaics crafted from everyday objects like ostrich eggshells.
+                Fact 2: Martins believed she was guided by a "little owl" spirit, inspiring the house's name and owl motif.
+                Fact 3: Today, The Owl House is a national monument, preserving Martins' unique artistic vision for future generations.</p>
+        </div>
+        <div class="place">
+            <img src="Nieu Church.jpg" alt="Nieu-Bethesda Church">
+            <h3>Nieu-Bethesda Church</h3>
+            <p>Fact 1: Built in the late 19th century, the Nieu-Bethesda Church is a beautiful example of Dutch
+                Reformed architecture.>Fact 1: Built in the late 19th century, the Nieu-Bethesda Church is a beautiful example of Dutch Reformed architecture.
+                Fact 2: The church's stained-glass windows and sandstone exterior contribute to its historical charm.
+                Fact 3: Services are still held in the church today, offering visitors a chance to experience its spiritual significance and connect with the local community.</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="buttons">
+    <a href="index.html" class="button-link">Index</a>
+    <a href="my-webpage-grid.html" class="button-link">Flexbox Personal Page</a>
+</div>
+
+</body>
 </html>
