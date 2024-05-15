@@ -56,10 +56,8 @@
 
         /*Subjects*/
         .subjects {
-            display: flex;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
         }
 
         .subject {
@@ -68,7 +66,7 @@
         }
 
         .subject img {
-            max-width: 100%;
+            max-width: 50%;
             height: auto;
         }
 
@@ -76,8 +74,6 @@
         .places {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
         }
 
         .place {
@@ -204,7 +200,7 @@
 
 <div class="buttons">
     <a href="index.html" class="button-link">Index</a>
-    <a href="my-webpage-grid.html" class="button-link">Flexbox Personal Page</a>
+    <a href="my-webpage.html" class="button-link">Flexbox Personal Page</a>
 </div>
 
 </body>

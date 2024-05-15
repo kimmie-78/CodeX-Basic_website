@@ -111,9 +111,10 @@
         }
     /*historical places*/  
     .container {
-      display: flex;
-      flex-wrap: wrap; 
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  flex-wrap: wrap;
+}
 
     .box {
       border: 1px solid #ccc;
@@ -150,7 +151,7 @@
   
 @media screen and (max-width: 768px) {
   .container {
-    flex-direction: column; 
+    flex-direction:row; 
   }
 
   .box:nth-child(odd) .content {
@@ -203,6 +204,7 @@
     <div class="main clearfix" >
         <div class="side-bar" >
             <h1>Which city?</h1>
+            <h2>Nieu-Bethesda</h2>
             <img src="Nieu.jpg" alt="nieu">
 </div>
 <div class="content" >
@@ -323,7 +325,7 @@ Fact 3: Today, The Owl House is a national monument, preserving Martins' unique 
       <div class="wrapper">
       <div class="content">
       <a href="index.html" class="button-link">Index</a>
-    <a href="my-webpage-grid.html" class="button-link">Flexbox Personal Page</a>
+    <a href="my-webpage-grid.html" class="button-link">Simple Grid Personal Page</a>
   </div>
 </div>
 </body>
