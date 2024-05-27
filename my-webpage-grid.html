@@ -28,7 +28,7 @@
 
         /*Content*/
         .content {
-            max-width: 800px;
+            
             margin: 0 auto;
             padding: 20px;
         }
@@ -74,17 +74,29 @@
         .places {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
         }
 
         .place {
             border: 1px solid #ccc;
             padding: 20px;
+            display: flex;
+            align-items: flex-start;
         }
 
         .place img {
-            max-width: 100%;
+            max-width: 150px;
             height: auto;
+            margin-left: 20px;
         }
+
+    @media(max-width:960px){
+        .first_img{
+            order:-1;
+        }
+            
+        
+    }
 
         /*Button*/
         .buttons {
@@ -120,9 +132,16 @@
 
 <div class="content">
     <h2>Which city?</h2>
-    <p>The Owl House: This eccentric museum, created by artist Helen Martins, is a must-see. Her whimsical sculptures
-        and colorful creations using ostrich eggshells offer a unique glimpse into her artistic vision.</p>
-    <!-- Add more content as needed -->
+    <p>The Owl House: This eccentric museum, created by artist Helen Martins, is a must-see. Her whimsical sculptures and colorful creations using ostrich eggshells offer a unique glimpse into her artistic vision.
+
+        Karoo Landscape: The vast, semi-arid Karoo landscape surrounding Nieu-Bethesda is a photographer's paradise. Dramatic sunsets, starry night skies, and unique rock formations create a sense of tranquility and remoteness.
+        
+        Arts and Crafts Scene: Nieu-Bethesda fosters a vibrant arts and crafts scene. Explore local galleries and studios to discover one-of-a-kind pieces by talented artisans.
+        
+        Stargazing Paradise: With minimal light pollution, Nieu-Bethesda offers exceptional stargazing opportunities. Witness the Milky Way in all its glory and marvel at the constellations on a clear night.
+        
+        Relaxing Escape: Nieu-Bethesda provides a welcome escape from the hustle and bustle of city life. Enjoy the slow pace, friendly locals, and peaceful atmosphere.</p>
+    
 </div>
 
 <div class="content">
@@ -170,29 +189,30 @@
     <h2>Historical Places</h2>
     <div class="places">
         <div class="place">
-            <img src="Damesfontein.jpg" alt="Damesfontein">
-            <h3>Damesfontein</h3>
-            <p>Fact 1: This restored 19th-century farmhouse offers a glimpse into the lives of early Karoo settlers.
-            Fact 1: This restored 19th-century farmhouse offers a glimpse into the lives of early Karoo settlers.
+            
+            <p> <b>Damesfontein</b><br>
+                
+                Fact 1: This restored 19th-century farmhouse offers a glimpse into the lives of early Karoo settlers.
                 Fact 2: The farmhouse belonged to the Steyn family for five generations, and the collection of artifacts within showcases their history and farming practices.
                 Fact 3: Visitors can tour the well-preserved rooms, explore the farmyard with traditional outbuildings, and learn about the region's agricultural heritage.</p>
+                <img src="Damesfontein.jpg" alt="Damesfontein" class="first_img">
         </div>
         <div class="place">
-            <img src="owl house.jpg" alt="Owl House">
-            <h3>Owl House</h3>
-            <p>Fact 1: Created by eccentric artist Helen Martins, The Owl House is a whimsical wonderland adorned with
-                sculptures and mosaics crafted from everyday objects like ostrich eggshells.
+            
+            <p><b>Owl House</b> <Br>
                 Fact 1: Created by eccentric artist Helen Martins, The Owl House is a whimsical wonderland adorned with sculptures and mosaics crafted from everyday objects like ostrich eggshells.
                 Fact 2: Martins believed she was guided by a "little owl" spirit, inspiring the house's name and owl motif.
                 Fact 3: Today, The Owl House is a national monument, preserving Martins' unique artistic vision for future generations.</p>
+                <img src="owl house.jpg" alt="Owl House" class="second_img">
         </div>
         <div class="place">
-            <img src="Nieu Church.jpg" alt="Nieu-Bethesda Church">
-            <h3>Nieu-Bethesda Church</h3>
-            <p>Fact 1: Built in the late 19th century, the Nieu-Bethesda Church is a beautiful example of Dutch
+            
+            <p><b>Nieu-Bethesda Church</b><br>
+                Fact 1: Built in the late 19th century, the Nieu-Bethesda Church is a beautiful example of Dutch
                 Reformed architecture.>Fact 1: Built in the late 19th century, the Nieu-Bethesda Church is a beautiful example of Dutch Reformed architecture.
                 Fact 2: The church's stained-glass windows and sandstone exterior contribute to its historical charm.
                 Fact 3: Services are still held in the church today, offering visitors a chance to experience its spiritual significance and connect with the local community.</p>
+                <img src="Nieu Church.jpg" alt="Nieu-Bethesda Church" class="first_img">
           </div>
         </div>
     </div>

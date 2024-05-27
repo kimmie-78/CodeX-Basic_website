@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,68 +110,51 @@
         .wrapper {
             margin-bottom: 20px;
         }
+
+
     /*historical places*/  
-    .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  flex-wrap: wrap;
-}
-
-    .box {
-      border: 1px solid #ccc;
-      padding: 20px;
-      max-width: 579px; 
-      margin-bottom: 20px; 
-      box-sizing: border-box; 
-      display: flex; 
-      flex-direction: column; 
-    }
-
-    .heading {
-      margin-bottom: 10px;
-    }
-
-    .content {
-      display: flex; 
-    }
-
-    .description {
-      flex: 1; 
-      font-size: 14px;
-    }
-    .content p{
-      font-size: 25px;
-    }
-
-    .image {
-      width: 120px; 
-      height: 120px; 
-      margin-left: auto;
-    }
-
+    .p{
+            font-size: 15px;
+        }
+        .heading{
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .column{
+            display: flex;
+        }
+        .image{
+            width: 150px;
+            margin:10px;
+        }
+        .main{
+            display:flex;
+        }
+       
+        @media(max-width:960px){
+            .mid-text{
+                order:1;
+            }
+            .mid-text-2{
+                order:0;
+            }
+            .main{
+                display:block;
+            }
+        }
+        @media(min-width:1000px){
+            .mid-text{
+                width: 250px;
+            }
+            .mid-text-2{
+                width: 250px;
+            }
+            .main{
+                display:flex;
+            }
+        }
   
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction:row; 
-  }
-
-  .box:nth-child(odd) .content {
-    flex-direction: row-reverse;
-  }
-
-  .box .content {
-    flex-direction: column;
-  }
-
-  .box .image {
-    margin-left: 0; 
-    margin-bottom: 10px; 
-  }
-
-  .box .description {
-    margin-left: 0; 
-  }
-}  
 /*button*/
 .wrapper .button-link {
   width: 100%;
@@ -201,7 +185,7 @@
         
       </div>
 
-    <div class="main clearfix" >
+    <div class="clearfix" >
         <div class="side-bar" >
             <h1>Which city?</h1>
             <h2>Nieu-Bethesda</h2>
@@ -283,50 +267,51 @@
 
 
     <div class="wrapper">
-        <p style="font-size: 35px;">Historical Places</p>
-    </div>
-    <div class="container">
-        <div class="box">
-          <div class="heading">
-            <h2>Damesfontein</h2>
-          </div>
-          <div class="content">
-            <img src="Damesfontein.jpg" alt="Image 1" width="120px" height="120px" class="image">
-            <div class="description">Fact 1: This restored 19th-century farmhouse offers a glimpse into the lives of early Karoo settlers.
-                Fact 2: The farmhouse belonged to the Steyn family for five generations, and the collection of artifacts within showcases their history and farming practices.
-                Fact 3: Visitors can tour the well-preserved rooms, explore the farmyard with traditional outbuildings, and learn about the region's agricultural heritage.</div>
-          </div>
-        </div>
-    
-        <div class="box">
-          <div class="heading">
-            <h2>Owl House</h2>
-          </div>
-          <div class="content">
-            <img src="owl house.jpg" alt="Image 2" width="120px" height="120px" class="image">
-            <div class="description">Fact 1: Created by eccentric artist Helen Martins, The Owl House is a whimsical wonderland adorned with sculptures and mosaics crafted from everyday objects like ostrich eggshells.
-Fact 2: Martins believed she was guided by a "little owl" spirit, inspiring the house's name and owl motif.
-Fact 3: Today, The Owl House is a national monument, preserving Martins' unique artistic vision for future generations.</div>
-          </div>
-        </div>
-    
-        <div class="box">
-          <div class="heading">
-            <h2>Nieu-Bethesda Church</h2>
-          </div>
-          <div class="content">
-            <img src="Nieu Church.jpg" alt="Image 3" width="120px" height="120px" class="image">
-            <div class="description">Fact 1: Built in the late 19th century, the Nieu-Bethesda Church is a beautiful example of Dutch Reformed architecture.
-                Fact 2: The church's stained-glass windows and sandstone exterior contribute to its historical charm.
-                Fact 3: Services are still held in the church today, offering visitors a chance to experience its spiritual significance and connect with the local community.</div>
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-      <div class="content">
-      <a href="index.html" class="button-link">Index</a>
-    <a href="my-webpage-grid.html" class="button-link">Simple Grid Personal Page</a>
+      <p style="font-size: 35px;">Historical Places</p>
   </div>
+
+  <div class="main">
+  <div>
+      <h2>Damesfontein</h2>
+          <div class="column">
+        <p class="mid-text">
+           Fact 1: This restored 19th-century farmhouse offers a glimpse into the lives of early Karoo settlers.
+           Fact 2: The farmhouse belonged to the Steyn family for five generations, and the collection of artifacts within showcases their history and farming practices.
+           Fact 3: Visitors can tour the well-preserved rooms, explore the farmyard with traditional outbuildings, and learn about the region's agricultural heritage.
+          </p>
+           <img src="Damesfontein.jpg" alt="Image 1" width="120px" height="120px" class="image">
+      </div>
+  </div>
+  
+      <div>
+          <h2>Owl House</h2>
+          <div class="column">
+        <p class="mid-text-2">
+          Fact 1: Created by eccentric artist Helen Martins, The Owl House is a whimsical wonderland adorned with sculptures and mosaics crafted from everyday objects like ostrich eggshells.
+          Fact 2: Martins believed she was guided by a "little owl" spirit, inspiring the house's name and owl motif.
+          Fact 3: Today, The Owl House is a national monument, preserving Martins' unique artistic vision for future generations.
+      </p>
+          <img src="owl house.jpg" alt="Image 2" width="120px" height="120px" class="image">   
+      </div>
+      </div>
+      <div>
+          <h2>Nieu-Bethesda Church</h2>
+          <div class="column">
+        <p class="mid-text">
+          Fact 1: Built in the late 19th century, the Nieu-Bethesda Church is a beautiful example of Dutch Reformed architecture.
+          Fact 2: The church's stained-glass windows and sandstone exterior contribute to its historical charm.
+          Fact 3: Services are still held in the church today, offering visitors a chance to experience its spiritual significance and connect with the local community.
+      </p>
+          <img src="Nieu Church.jpg" alt="Image 3" width="120px" height="120px" class="image"> 
+      </div>
+      </div>
+
+      
+</div>
+<div class="wrapper">
+  <div class="content">
+  <a href="index.html" class="button-link">Index</a>
+<a href="my-webpage-grid.html" class="button-link">Simple Grid Personal Page</a>
 </div>
 </body>
 </html>
